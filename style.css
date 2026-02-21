@@ -1,0 +1,162 @@
+/* ===== Reset عام (مهم) ===== */
+/* يمنع مشاكل العرض والتمدد */
+* {
+  margin: 0;              /* إزالة الهوامش الافتراضية */
+  padding: 0;             /* إزالة المسافات الداخلية */
+  box-sizing: border-box; /* تثبيت حساب الحجم */
+}
+
+/* ===== إعدادات عامة ===== */
+body {
+  font-family: Arial, sans-serif; /* تحديد نوع الخط */
+  background: #1e1e2f;            /* لون خلفية الصفحة */
+  color: white;                   /* لون النص */
+}
+
+/* ===== الشريط العلوي ===== */
+.top-bar {
+  position: fixed;        /* تثبيت الشريط عند النزول */
+  top: 0;                 /* من أعلى الصفحة */
+  left: 0;                /* من اليسار */
+  width: 100%;            /* بعرض الشاشة */
+  padding: 15px 40px;     /* مسافة داخلية */
+  display: flex;          /* ترتيب العناصر أفقياً */
+  justify-content: space-between; /* مسافة بين الاسم والروابط */
+  align-items: center;    /* توسيط العناصر عمودياً */
+  background: #000;       /* لون خلفية الشريط */
+  z-index: 1000;          /* فوق باقي العناصر */
+}
+
+/* اسم الموقع */
+.logo {
+  font-size: 20px;        /* حجم الخط */
+  font-weight: bold;      /* خط عريض */
+}
+
+/* روابط التنقل */
+.nav-links a {
+  color: white;           /* لون الروابط */
+  text-decoration: none;  /* إزالة الخط تحت الرابط */
+  margin-left: 20px;      /* مسافة بين الروابط */
+  font-size: 14px;        /* حجم الخط */
+}
+
+/* تأثير عند المرور */
+.nav-links a:hover {
+  text-decoration: underline; /* خط تحت الرابط عند المرور */
+}
+
+/* ===== القسم الرئيسي ===== */
+.hero {
+  padding-top: 140px;     /* مسافة بسبب الشريط العلوي */
+  padding-bottom: 60px;   /* مسافة من الأسفل */
+  text-align: center;     /* توسيط المحتوى */
+}
+
+/* الصورة الشخصية */
+.profile-photo {
+  width: 140px;           /* عرض الصورة */
+  height: 140px;          /* ارتفاع الصورة */
+  border-radius: 50%;     /* جعل الصورة دائرية */
+  border: 3px solid white;/* إطار أبيض */
+}
+
+/* العنوان */
+.hero h1 {
+  margin-top: 15px;       /* مسافة فوق العنوان */
+}
+
+/* النص التعريفي */
+.intro {
+  max-width: 600px;       /* تحديد عرض النص */
+  margin: 15px auto;      /* توسيط النص */
+  line-height: 1.6;       /* تباعد بين الأسطر */
+  font-size: 15px;        /* حجم الخط */
+}
+
+/* روابط التواصل */
+.social {
+  margin-top: 20px;       /* مسافة من الأعلى */
+}
+
+.social a {
+  margin: 0 10px;         /* مسافة بين الروابط */
+  color: #00c3ff;         /* لون مميز */
+  text-decoration: none;  /* بدون خط */
+  font-size: 14px;        /* حجم الخط */
+}
+
+/* ===== قسم Ben Kimim ===== */
+.about {
+  padding: 60px 20px;     /* مسافة داخلية */
+  text-align: center;     /* توسيط المحتوى */
+  background: #181828;    /* لون أفتح من الخلفية */
+}
+
+.about h2 {
+  margin-bottom: 15px;    /* مسافة تحت العنوان */
+}
+
+/* معلومات الدراسة */
+.about-main {
+  margin-bottom: 15px;    /* مسافة من الأسفل */
+  line-height: 1.8;       /* تباعد الأسطر */
+  font-weight: bold;      /* خط عريض */
+}
+
+/* النص */
+.about-text {
+  max-width: 650px;       /* عرض النص */
+  margin: auto;           /* توسيط */
+  line-height: 1.6;       /* تباعد الأسطر */
+  font-size: 15px;        /* حجم الخط */
+}
+
+/* ===== Eğitim Section ===== */
+.education {
+  padding: 60px 20px;     /* مسافة داخلية */
+  background: #1e1e2f;    /* نفس خلفية الصفحة */
+  text-align: center;     /* توسيط */
+}
+
+.education h2 {
+  margin-bottom: 30px;    /* مسافة تحت العنوان */
+}
+
+/* عنصر تعليمي */
+.edu-item {
+  max-width: 600px;       /* عرض المربع */
+  margin: 0 auto 25px;    /* توسيط ومسافة أسفل */
+  padding: 15px;          /* مسافة داخلية */
+  background: #181828;    /* لون المربع */
+  border-radius: 8px;     /* زوايا ناعمة */
+}
+
+/* اسم المؤسسة */
+.edu-item h3 {
+  margin-bottom: 5px;     /* مسافة أسفل العنوان */
+  font-size: 18px;        /* حجم الخط */
+}
+
+/* التخصص */
+.edu-item p {
+  margin: 5px 0;          /* مسافة فوق وتحت */
+  font-size: 15px;        /* حجم الخط */
+}
+
+/* التاريخ */
+.edu-item span {
+  font-size: 13px;        /* حجم أصغر */
+  color: #aaa;            /* لون رمادي */
+}
+
+/* ===== Animation for Eğitim boxes ===== */
+.edu-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* حركة ناعمة */
+}
+
+/* عند المرور بالماوس */
+.edu-item:hover {
+  transform: scale(1.05); /* تكبير خفيف */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* إضافة ظل */
+}
